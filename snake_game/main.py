@@ -5,6 +5,8 @@ screen.setup(width=600, height=600) #setting dimensions
 screen.bgcolor("black") #setting color
 screen.title("snakegame")#setting title
 
+starting_positions= [(0,0),(-20,0),(-40,0)]
+
 segment_1 = Turtle("square")
 segment_1.color("red")
 
