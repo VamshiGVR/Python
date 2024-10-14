@@ -4,4 +4,4 @@
 2) check in commandprompt : python --version || python3 --version
 
 
-# This is also contains CICD Pipeline with GitHub access : https://docs.github.com/en/actions
+#Contains CICD Pipeline with GitHub Actions : https://docs.github.com/en/actions
