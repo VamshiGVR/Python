@@ -1,0 +1,31 @@
+#Declaring name
+name: CI/CD pipeline
+
+
+#It triggers when a pull request is done on main branch
+on: 
+  pull_request:
+    branches:
+      -main
+
+env: 
+  BRANCH: ${{github.head_ref}} #need to check
+
+#uses to cancel anything runs on same to save resources
+  cancel-in-progress: true
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: check out changes
+      uses: actions/checkout@v4
+
+  CI:
+    name: CI
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
