@@ -7,21 +7,28 @@ on:
   pull_request:
     branches:
       -main
+  push: 
+    branches:
+      -main
 
 env: 
-  BRANCH: ${{github.head_ref}}
+  BRANCH: ${{github.head_ref}} #need to check
+
+#uses to cancel anything runs on same to save resources
   cancel-in-progress: true
 
 jobs:
   action:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
-    -name: check out changes
-     uses: actions/checkout@v4
+    - name: check out changes
+      uses: actions/checkout@v4
 
-steps:
-- uses: actions/checkout@v4
-- uses: actions/setup-python@v5
-  with:
-    python-version: '3.12'   
-- run: python my_script.py
+  CI:
+    name: CI
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
