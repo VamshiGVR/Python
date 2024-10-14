@@ -1,34 +1,38 @@
-#Declaring name
-name: CI/CD pipeline
+###############INTEGRATION##############
 
+# name of the pipeline
+name: Continuous Integration Workflow #can be orbitary
 
-#It triggers when a pull request is done on main branch
+#Event is triggered when push || pull_request of branch main
 on: 
+  push: 
+    branches: 
+      - main
   pull_request:
     branches:
-      -main
-  push: 
-    branches:
-      -main
+      - main
+      
+  #Gives a Manual option to trigger the Pipeline
+  workflow_dispatch:
 
-env: 
-  BRANCH: ${{github.head_ref}} #need to check
+#list of jobs
+jobs: 
+    first-job:  #can be orbitary
+      #The Operating System
+        runs-on: ubuntu-latest
+        steps:
+          #Utlizing the latest actions// V4 is the version
+            - name: Checkout actions
+              uses: actions/checkout@v4 
 
-#uses to cancel anything runs on same to save resources
-  cancel-in-progress: true
-
-jobs:
-  action:
-    runs-on: ubuntu-latest
-    steps: 
-    - name: check out changes
-      uses: actions/checkout@v4
-
-  CI:
-    name: CI
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.12
+    second-job:  #can be orbitary
+        runs-on: ubuntu-latest
+        #needs => The step mention must be completed to start the current step
+        needs: first-job
+        #IF is added to run rest only when step mentioned must complete successfully
+        if: needs.first-job.outputs == 'true'
+        steps:
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                python-version: '3.12'
