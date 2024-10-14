@@ -24,6 +24,7 @@ jobs:
           #Utlizing the latest actions// V4 is the version
             - name: Checkout actions
               uses: actions/checkout@v4 
+            - run: echo "The ${{ github.repository }} repository has been cloned "
 
     second-job:  #can be orbitary
         runs-on: ubuntu-latest
