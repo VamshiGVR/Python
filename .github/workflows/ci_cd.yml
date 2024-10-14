@@ -49,7 +49,7 @@ jobs:
           Greeting: Hello
         steps:
             - name: "Say Hello it's Monday"
-              run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+              run: echo "$Greeting $First_Name."
               env:
                 First_Name: python
 
