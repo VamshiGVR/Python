@@ -20,5 +20,5 @@ segment_3.goto(-40,0)
 
 
 
-#holding screen apperance
+#holding screen apperance##
 screen.exitonclick()
