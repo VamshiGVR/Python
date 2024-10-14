@@ -28,7 +28,7 @@ jobs:
     second-job:  #can be orbitary
         runs-on: ubuntu-latest
         #needs => The step mention must be completed to start the current step
-        needs: first-job
+        #needs: first-job
         #IF is added to run rest only when step mentioned must complete successfully
         steps:
             - name: Set up Python
@@ -44,7 +44,7 @@ jobs:
 
     third-job : 
         runs-on: ubuntu-latest
-        needs: [first-job, second-job]
+        #needs: [first-job, second-job]
         env:
           Greeting: Hello
         steps:
