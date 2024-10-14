@@ -1,0 +1,19 @@
+CONDTIONS IN GAME
+
+The deck is unlimted
+
+There are no jokers
+
+CARDS= [11,2,3,4,5,6,7,8,9,10,10,10,10]
+
+This is Card game
+Wins: closes to 21
+If more than 21 losses immediatley.
+Score equals = DRAW
+if < 17, pick other card
+
+Card values
+Jack, Queen, King are counted as 10
+Ace or A can be 1 or 11
+
+Can pick cards as we wish
