@@ -1,3 +1,5 @@
+#FOR LOOP
+
 #loop into list add each
 numbers=[1,2,2,4,6]
 
