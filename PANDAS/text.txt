@@ -5,3 +5,7 @@ To create a virtualenv use the following command:
 =>python3 -m virtualenv
 
 => cd \venv\Scripts> activate 
+
+
+
+in commandprompt installed : pip install pandas
