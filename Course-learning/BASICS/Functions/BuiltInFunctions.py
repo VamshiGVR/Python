@@ -3,7 +3,8 @@ name ="Python"
 
 age = 1
 
-Cars=("BMW", "NISSAN", "HONDA")
+    #Lists
+Cars=["BMW", "NISSAN", "HONDA"]
 
 rng = range(0, 10) #range(startValue, endValue) #but doesnt includes EndValue
 rng = range(0, 20, 2) #range(startValue, endValue, incrementValue) #but doesnt includes EndValue
@@ -66,5 +67,28 @@ print(sortedNumbers)
 sortedEmployes = sorted(employes, key= lambda employee: employee["Salary"])
     #Sorted based on key word in revese order
 sortedEmployesReverse = sorted(employes, key= lambda employee: employee["Salary"], reverse=True)
-print(sortedEmployes)
-print(sortedEmployesReverse)
+print("ORDER: ",sortedEmployes)
+print("ORDER: ",sortedEmployesReverse)
+
+    #enumertate
+print("ENUMERATE")
+for index, car in enumerate(Cars):
+    print(f"{index+1}.{car}")
+
+    #open
+    #Method1
+file = open("builtinfunctioncreated1.txt", "w") #w stands for createfile
+file.write("hello\nThis created by first builtin function")# write is used to write in file
+file.close()#to close file
+    #Method2
+with open("builtinfunctioncreated2.txt", "w") as file:
+    file.write("hello\nThis created by second builtin function")
+
+with open("builtinfunctioncreated2.txt", "r") as file:#r is used to read inside file
+    text = file.read()
+    print(text)
+
+with open("builtinfunctioncreated1.txt", "a") as file: #a is used to append at end of file #not for replacing content
+    file.write("\ncreated this line by append")
+
+    # we have more modes like a, r, w, ar,etc./.....          
