@@ -3,6 +3,13 @@ This is used for learning Python and PySpark
 2) check in commandprompt : python --version || python3 --version
 
 
+#CASING
+constants: CAPITAL with snake_case : MAX_CONSTANTS = 10
+variables: lowercase with snake-case : total_users
+Functions: snake_case : calculate_area
+Classes: CamelCase: PrioritizedmemoryReplay()
+
+
 Contains CICD Pipeline with GitHub Actions : https://docs.github.com/en/actions
 
 
