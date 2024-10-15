@@ -1,0 +1,7 @@
+To create a virtualenv use the following command:
+=>python -m venv ./venv
+
+
+=>python3 -m virtualenv
+
+=> cd \venv\Scripts> activate 
