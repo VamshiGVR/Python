@@ -1,20 +1,46 @@
 #lists => data structures which can hold different datatypes
-#arrsy => data structures which can hold same datatypes
-belts_colour = ["white", "blue", "Red"] #LIST
-print (belts_colour)
+#arrsys => data structures which can hold same datatypes
+colors = ["white", "blue", "Red", "Ash"] #LIST
+print (colors)
 
 #To print elements in LIST
-for belt in belts_colour:    
-    print(belt)
+for color in colors:    
+    print(color)
 
 #Add element into LIST
-belts_colour.append("orange")
-print (belts_colour)
+colors.append("orange")
+print (colors)
 
 #Add elememt in particular place in a LIST
 #In List element starts from 0,1,2,3
-belts_colour.insert(1,"Pink")
-print (belts_colour)
+colors.insert(1,"Pink")
+print (colors)
 
 #To find the lenght of LIST
-print(len(belts_colour))
+print(len(colors))
+
+
+#Print single element
+print(colors[3])
+
+
+#Replace directly in list 
+colors[0] ="White"
+print(colors)
+
+#Adding directly to list
+colors.append("Black")
+print(colors)
+
+#Removing directly to list
+colors.remove("Ash")
+print(colors)
+
+
+#removing directly from list with its index
+colors.pop(3)
+print(colors)
+
+#clear list
+colors.clear()
+print(colors)
