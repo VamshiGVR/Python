@@ -1,4 +1,4 @@
-#we can add or remove elements, but cant replace as they are unordered
+#we can add or remove elements, but cant replace as they are unordered,  no duplicates
 colors = {"white", "blue", "Red", "Ash"} #SETS
 print (colors)
 
